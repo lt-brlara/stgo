@@ -38,6 +38,8 @@ func main() {
 
 	findings := data.Stig.Findings
 
+	initTui(findings)
+
 	if *srgFlag != "" || *vulnFlag != "" {
 		matchingFindings := 0
 		for _, finding := range findings {
